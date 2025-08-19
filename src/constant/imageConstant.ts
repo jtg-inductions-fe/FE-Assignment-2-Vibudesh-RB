@@ -1,5 +1,5 @@
 import Page404 from '@assets/images/404-page.svg';
-import Avatar1 from '@assets/images/Avatar-1.svg';
+import Avatar1 from '@assets/images/avatar-1.svg';
 import Avatar2 from '@assets/images/avatar-2.svg';
 import Avatar3 from '@assets/images/avatar-3.svg';
 import Avatar4 from '@assets/images/avatar-4.svg';

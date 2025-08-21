@@ -1,4 +1,4 @@
-import { AccordionDetails, AccordionSummary, styled } from '@mui/material';
+import { AccordionDetails, AccordionSummary, Box, styled } from '@mui/material';
 
 export const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
     color: theme.palette.text.primary,
@@ -28,4 +28,13 @@ export const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
 
 export const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
     padding: theme.spacing(0),
+}));
+
+export const StyledBox = styled(Box)(({ theme }) => ({
+    width: 24,
+    height: 24,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: theme.spacing(4),
 }));

@@ -3,7 +3,6 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 
 import SearchIcon from '@mui/icons-material/Search';
-import Autocomplete from '@mui/material/Autocomplete';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 
@@ -20,30 +19,29 @@ const AutoComplete = ({ options }: AutoCompleteProps) => {
         }
     };
     return (
-        <Search>
-            <Autocomplete
-                id="free-solo-demo"
-                freeSolo
-                onChange={handleChange}
-                options={options.map((option) => option)}
-                renderInput={(params) => (
-                    <TextField
-                        {...params}
-                        placeholder="Search"
-                        slotProps={{
-                            input: {
-                                ...params.InputProps,
-                                startAdornment: (
-                                    <InputAdornment position="start">
-                                        <SearchIcon />
-                                    </InputAdornment>
-                                ),
-                            },
-                        }}
-                    />
-                )}
-            />
-        </Search>
+        <Search
+            id="free-solo-demo"
+            freeSolo
+            onChange={handleChange}
+            options={options.map((option) => option)}
+            renderInput={(params) => (
+                <TextField
+                    {...params}
+                    placeholder="Search"
+                    color="primary"
+                    slotProps={{
+                        input: {
+                            ...params.InputProps,
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <SearchIcon color="secondary" />
+                                </InputAdornment>
+                            ),
+                        },
+                    }}
+                />
+            )}
+        />
     );
 };
 

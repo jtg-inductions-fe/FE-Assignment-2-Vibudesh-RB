@@ -1,5 +1,3 @@
-import React from 'react';
-
 import StyledAvatar from 'components/Avatar/Avatar.styles';
 
 import { Divider, Stack, Typography } from '@mui/material';
@@ -10,12 +8,9 @@ import {
     StyledStack,
     StyledTypography,
 } from './CardContent.styles';
-import { CardData } from './CardContent.types';
-interface CardContentItemProps {
-    item: CardData;
-}
+import { CardContentItemProps } from './CardContent.types';
 
-const CardContentItem: React.FC<CardContentItemProps> = ({ item }) => (
+const CardContentItem = ({ item }: CardContentItemProps) => (
     <CardWrapper>
         <CardWrapperContent>
             <StyledStack direction="row" spacing={2} alignItems="center">

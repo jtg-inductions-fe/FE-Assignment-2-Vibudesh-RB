@@ -1,11 +1,12 @@
-import React from 'react';
+import { Tooltip, TooltipProps as MuiTooltipProps } from '@mui/material';
 
-import { Tooltip } from '@mui/material';
+export interface TooltipProps extends MuiTooltipProps {
+    children: React.ReactElement;
+}
 
-import { TooltipProps } from './Tooltip.types';
-const TooltipComponent: React.FC<TooltipProps> = ({ date, sales }) => (
-    <Tooltip title={`${date}`}>
-        <span>{`Sales: ${sales}`}</span>
+const TooltipComponent = ({ title, children, ...rest }: TooltipProps) => (
+    <Tooltip title={title} {...rest}>
+        {children}
     </Tooltip>
 );
 

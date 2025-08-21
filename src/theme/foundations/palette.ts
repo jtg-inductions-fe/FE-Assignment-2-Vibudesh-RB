@@ -10,7 +10,7 @@ export const palette: PaletteOptions = {
         contrastText: COLORS.WHITE,
     },
     secondary: {
-        main: COLORS.GREEN_DARK,
+        main: COLORS.BLACK,
         contrastText: COLORS.WHITE,
     },
     error: {
@@ -19,6 +19,7 @@ export const palette: PaletteOptions = {
     },
     background: {
         default: COLORS.WHITE,
+        paper: COLORS.GRAY_BACKGROUND,
     },
     text: {
         primary: COLORS.BLACK,

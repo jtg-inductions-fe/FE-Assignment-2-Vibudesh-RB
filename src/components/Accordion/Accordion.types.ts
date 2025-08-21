@@ -1,6 +1,6 @@
 import { SvgIconComponent } from '@mui/icons-material';
 
-export interface AccordionProps {
+export type AccordionProps = {
     label: string;
     icon: SvgIconComponent;
     children: {
@@ -8,4 +8,4 @@ export interface AccordionProps {
         to: string;
         icon?: SvgIconComponent;
     }[];
-}
+};

@@ -1,3 +1,3 @@
-export interface AutoCompleteProps {
+export type AutoCompleteProps = {
     options: string[];
-}
+};

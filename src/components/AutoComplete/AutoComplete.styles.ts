@@ -1,15 +1,15 @@
-import { Stack, styled } from '@mui/material';
+import { Autocomplete, styled } from '@mui/material';
 
-export const Search = styled(Stack)(() => ({
-    width: 402,
-    height: 45,
-    opacity: 1,
-    padding: '13px 15px',
-    borderRadius: '16px',
-    borderWidth: '1px',
-    borderStyle: 'solid',
-    borderColor: 'rgba(0,0,0,0.23)',
-    boxSizing: 'border-box',
-    boxShadow:
-        '0px 4px 0px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)',
-}));
+export const Search = styled(Autocomplete)(({ theme }) => ({
+    '& .MuiInputBase-root.MuiOutlinedInput-root': {
+        width: theme.typography.pxToRem(402),
+        height: theme.typography.pxToRem(45),
+        backgroundColor: theme.palette.secondary.light,
+        opacity: 1,
+        padding: `${theme.typography.pxToRem(13)} ${theme.typography.pxToRem(15)}`,
+        borderRadius: theme.typography.pxToRem(16),
+        border: `${theme.typography.pxToRem(1)} solid ${theme.palette.background.paper}`,
+        boxSizing: 'border-box',
+        boxShadow: `0 ${theme.typography.pxToRem(4)} ${theme.typography.pxToRem(4)} 0 ${theme.palette.grey[400]}`,
+    },
+})) as typeof Autocomplete;

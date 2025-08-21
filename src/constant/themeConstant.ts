@@ -15,6 +15,7 @@ export const COLORS = {
     RED_LIGHT: '#FBD5D5',
     GREEN_LIGHT: '#DEF7EC',
     GRAY_DARK: '#71717A',
+    GRAY_BACKGROUND: '#F9FAFB',
 } as const;
 
 /**

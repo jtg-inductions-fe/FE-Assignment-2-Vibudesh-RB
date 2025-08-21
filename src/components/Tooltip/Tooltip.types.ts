@@ -1,4 +1,4 @@
-export interface TooltipProps {
-    date: string;
-    sales: string;
-}
+export type TooltipProps = {
+    title?: string;
+    children?: React.ReactElement;
+};

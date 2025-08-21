@@ -1,6 +1,6 @@
-import { ListItemButton, styled } from '@mui/material';
+import { Box, ListItemButton, styled } from '@mui/material';
 
-const ListItemLink = styled(ListItemButton)(({ theme }) => ({
+export const ListItemLink = styled(ListItemButton)(({ theme }) => ({
     textDecoration: 'none',
     display: 'flex',
     justifyContent: 'space-between',
@@ -16,4 +16,11 @@ const ListItemLink = styled(ListItemButton)(({ theme }) => ({
     },
 })) as typeof ListItemButton;
 
-export default ListItemLink;
+export const StyledBox = styled(Box)(({ theme }) => ({
+    width: 24,
+    height: 24,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: theme.spacing(4),
+}));

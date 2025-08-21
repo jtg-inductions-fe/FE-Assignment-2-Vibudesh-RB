@@ -2,15 +2,12 @@ import * as React from 'react';
 
 import StyledAvatar from 'components/Avatar/Avatar.styles';
 
-import { Box, IconButton, Popover, Typography } from '@mui/material';
+import { Box, Popover, Typography } from '@mui/material';
 
+import { StyledIconButton } from './ProfilePopOver.styles';
 import { ProfilePopoverProps } from './ProfilePopOver.types';
 
-const ProfilePopover: React.FC<ProfilePopoverProps> = ({
-    name,
-    email,
-    imageUrl,
-}) => {
+const ProfilePopover = ({ name, email, imageUrl }: ProfilePopoverProps) => {
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
         null,
     );
@@ -28,9 +25,9 @@ const ProfilePopover: React.FC<ProfilePopoverProps> = ({
 
     return (
         <>
-            <IconButton onClick={handleClick}>
+            <StyledIconButton onClick={handleClick}>
                 <StyledAvatar src={imageUrl} alt={name} />
-            </IconButton>
+            </StyledIconButton>
 
             <Popover
                 id={id}

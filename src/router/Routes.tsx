@@ -11,6 +11,12 @@ export const Routes: RouteObject[] = [
             </Layout>
         ),
         errorElement: <h1>Error loading page</h1>,
+        children: [
+            {
+                index: true,
+                element: <h1>Home</h1>,
+            },
+        ],
     },
     {
         path: routes.Not_Found,
@@ -20,5 +26,11 @@ export const Routes: RouteObject[] = [
             </Layout>
         ),
         errorElement: <h1>Error loading page</h1>,
+        children: [
+            {
+                path: '*',
+                element: <h1>Not Found</h1>,
+            },
+        ],
     },
 ];

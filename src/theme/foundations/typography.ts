@@ -33,9 +33,9 @@ const typographyStyle = (theme: Theme): TypographyOptions => ({
     fontWeightLight,
     fontWeightRegular,
     fontWeightMedium,
+    fontWeightBold,
 
     h1: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightBold,
         fontSize: typographyUtil.pxToRem(30),
         lineHeight: lineHeightBase,
@@ -46,56 +46,48 @@ const typographyStyle = (theme: Theme): TypographyOptions => ({
     },
 
     h2: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightBold,
         fontSize: typographyUtil.pxToRem(20),
         lineHeight: lineHeightBase,
     },
 
     h3: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightMedium,
         fontSize: typographyUtil.pxToRem(20),
         lineHeight: lineHeightBase,
     },
 
     subtitle1: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightMedium,
         fontSize: typographyUtil.pxToRem(16),
         lineHeight: lineHeightBase,
     },
 
     subtitle2: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightRegular,
         fontSize: typographyUtil.pxToRem(12),
         lineHeight: lineHeightBase,
     },
 
     body1: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightLight,
         fontSize: typographyUtil.pxToRem(16),
         lineHeight: lineHeightBase,
     },
 
     caption: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightLight,
         fontSize: typographyUtil.pxToRem(12),
         lineHeight: lineHeightBase,
     },
 
     overline: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightMedium,
         fontSize: typographyUtil.pxToRem(12),
         lineHeight: lineHeightBase,
     },
 
     button: {
-        fontFamily: interFontFamily,
         fontWeight: fontWeightMedium,
         fontSize: typographyUtil.pxToRem(14),
         lineHeight: lineHeightBase,

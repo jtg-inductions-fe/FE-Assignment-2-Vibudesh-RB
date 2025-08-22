@@ -1,6 +1,6 @@
 import { RouteObject } from 'react-router';
 
-import Layout from '@layouts/Layout';
+import Layout from '@layouts/Layout.component';
 
 export const routes: RouteObject[] = [
     {

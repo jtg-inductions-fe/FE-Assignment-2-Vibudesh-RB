@@ -15,7 +15,7 @@ export const COLORS = {
     RED_LIGHT: '#FBD5D5',
     GREEN_LIGHT: '#DEF7EC',
     GRAY_DARK: '#71717A',
-};
+} as const;
 
 /**
  * Base font size in pixels.

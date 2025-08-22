@@ -1,8 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { CssBaseline } from '@mui/material';
-import { ThemeProvider } from '@mui/system';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import { theme } from '@theme';
 

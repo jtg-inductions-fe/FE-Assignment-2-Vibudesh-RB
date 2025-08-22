@@ -4,14 +4,13 @@ import { COLORS } from '@constant';
 
 export const palette: PaletteOptions = {
     primary: {
-        main: COLORS.BLACK,
+        main: COLORS.GREEN_MID,
         light: COLORS.GRAY_LIGHT,
         dark: COLORS.GRAY_DARK,
         contrastText: COLORS.WHITE,
     },
     secondary: {
-        main: COLORS.GREEN_MID,
-        dark: COLORS.GREEN_DARK,
+        main: COLORS.GREEN_DARK,
         contrastText: COLORS.WHITE,
     },
     error: {

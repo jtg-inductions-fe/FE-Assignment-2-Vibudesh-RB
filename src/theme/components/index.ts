@@ -14,8 +14,12 @@ export const components: Components = {
                 fontFamily: 'Inter',
                 fontStyle: 'normal',
                 fontWeight: '400 700',
-                src: `url(${InterVariableWOFF2}) format('woff2'),
-             url(${InterVariableTTF}) format('truetype')`,
+                src: `
+    local('Inter'),
+    local('Inter-Regular'),
+    url(${InterVariableWOFF2}) format('woff2'),
+    url(${InterVariableTTF}) format('truetype')
+  `,
             },
         },
     },

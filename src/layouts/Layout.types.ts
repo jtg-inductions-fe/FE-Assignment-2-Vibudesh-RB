@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-export interface LayoutProps {
+export type LayoutProps = {
     showHeader?: boolean;
     showSidebar?: boolean;
     children?: ReactNode;
-}
+};

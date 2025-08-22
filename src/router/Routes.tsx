@@ -1,21 +1,21 @@
 import { RouteObject } from 'react-router';
 
-import Layout from '@layouts/Layout.component';
-
-export const routes: RouteObject[] = [
+import { routes } from '@constant';
+import { Layout } from '@layouts';
+export const Routes: RouteObject[] = [
     {
-        path: '/',
+        path: routes.Home,
         element: (
-            <Layout showHeader={true} showSidebar={true}>
+            <Layout showHeader showSidebar>
                 <h1>Home</h1>
             </Layout>
         ),
         errorElement: <h1>Error loading page</h1>,
     },
     {
-        path: '*',
+        path: routes.Not_Found,
         element: (
-            <Layout showHeader={true}>
+            <Layout showHeader>
                 <h1>Not Found</h1>
             </Layout>
         ),

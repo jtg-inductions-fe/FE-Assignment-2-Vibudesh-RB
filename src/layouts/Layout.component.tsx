@@ -1,5 +1,7 @@
 import { Outlet } from 'react-router';
 
+import { Box } from '@mui/material';
+
 import { LayoutProps } from './Layout.types';
 
 const Layout = ({
@@ -7,11 +9,11 @@ const Layout = ({
     showSidebar = false,
     children,
 }: LayoutProps) => (
-    <div>
+    <Box>
         {showHeader && <header>Header</header>}
         {showSidebar && <h2>Sidebar</h2>}
         <main>{children ?? <Outlet />}</main>
-    </div>
+    </Box>
 );
 
 export default Layout;

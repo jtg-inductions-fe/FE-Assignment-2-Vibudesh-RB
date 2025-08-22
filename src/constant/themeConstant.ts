@@ -3,10 +3,19 @@
  * @constant
  */
 export const COLORS = {
-    PRIMARY: {
-        MAIN: '#0E9F6E',
-    },
-};
+    BLACK: '#111827',
+    WHITE: '#FFFFFF',
+    GRAY_MID: '#6B7280',
+    GRAY_LIGHT: '#9CA3AF',
+    RED_DARK: '#9B1C1C',
+    BLUE_LIGHT: '#1E429F',
+    GREEN_MID: '#0E9F6E',
+    GREEN_DARK: '#03543F',
+    BLUE_DARK: '#E1EFFE',
+    RED_LIGHT: '#FBD5D5',
+    GREEN_LIGHT: '#DEF7EC',
+    GRAY_DARK: '#71717A',
+} as const;
 
 /**
  * Base font size in pixels.

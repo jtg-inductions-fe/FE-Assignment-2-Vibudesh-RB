@@ -1,10 +1,11 @@
+// src/theme/foundations/typography.ts
 import type { Theme } from '@mui/material/styles';
 import type {
     TypographyOptions,
     TypographyUtils,
 } from '@mui/material/styles/createTypography';
 
-import { HTML_FONT_SIZE } from '@constant';
+import { Fonts, HTML_FONT_SIZE } from '@constant';
 
 /* Custom px to rem function */
 const typographyUtil: TypographyUtils = {
@@ -16,30 +17,78 @@ const typographyUtil: TypographyUtils = {
     pxToRem: (px: number) => `${px / HTML_FONT_SIZE}` + 'rem',
 };
 
-// TODO: Add the necessary typographies here.
-/**
- * Creates a typography block with various styles
- * @param theme - Theme object to access the breakpoints.
- * @returns The function returns a TypographyOptions object, which includes various typography settings,
- */
 const typographyStyle = (theme: Theme): TypographyOptions => ({
-    fontFamily: 'Inter',
+    fontFamily: Fonts.interFontFamily,
     htmlFontSize: HTML_FONT_SIZE,
 
-    fontWeightLight: 400,
-    fontWeightRegular: 500,
-    fontWeightMedium: 600,
+    fontWeightLight: Fonts.fontWeightLight,
+    fontWeightRegular: Fonts.fontWeightRegular,
+    fontWeightMedium: Fonts.fontWeightMedium,
+    fontWeightBold: Fonts.fontWeightBold,
 
     h1: {
+        fontWeight: Fonts.fontWeightBold,
         fontSize: typographyUtil.pxToRem(30),
-        fontWeight: 700,
-        lineHeight: typographyUtil.pxToRem(45),
-
+        lineHeight: Fonts.lineHeightBase,
         [theme.breakpoints.up('md')]: {
             fontSize: typographyUtil.pxToRem(48),
             lineHeight: typographyUtil.pxToRem(62.5),
         },
     },
+
+    h2: {
+        fontWeight: Fonts.fontWeightBold,
+        fontSize: typographyUtil.pxToRem(20),
+        lineHeight: Fonts.lineHeightBase,
+    },
+
+    h3: {
+        fontWeight: Fonts.fontWeightMedium,
+        fontSize: typographyUtil.pxToRem(20),
+        lineHeight: Fonts.lineHeightBase,
+    },
+
+    h4: {
+        fontWeight: Fonts.fontWeightRegular,
+        fontSize: typographyUtil.pxToRem(16),
+        lineHeight: Fonts.lineHeightBase,
+    },
+
+    subtitle1: {
+        fontWeight: Fonts.fontWeightMedium,
+        fontSize: typographyUtil.pxToRem(16),
+        lineHeight: Fonts.lineHeightBase,
+    },
+
+    subtitle2: {
+        fontWeight: Fonts.fontWeightRegular,
+        fontSize: typographyUtil.pxToRem(12),
+        lineHeight: Fonts.lineHeightBase,
+    },
+
+    body1: {
+        fontWeight: Fonts.fontWeightLight,
+        fontSize: typographyUtil.pxToRem(16),
+        lineHeight: Fonts.lineHeightBase,
+    },
+
+    caption: {
+        fontWeight: Fonts.fontWeightLight,
+        fontSize: typographyUtil.pxToRem(12),
+        lineHeight: Fonts.lineHeightBase,
+    },
+
+    overline: {
+        fontWeight: Fonts.fontWeightMedium,
+        fontSize: typographyUtil.pxToRem(12),
+        lineHeight: Fonts.lineHeightBase,
+    },
+
+    button: {
+        fontWeight: Fonts.fontWeightMedium,
+        fontSize: typographyUtil.pxToRem(14),
+        lineHeight: Fonts.lineHeightBase,
+    },
 });
 
-export const typography = { typographyStyle, typographyUtil };
+export const typography = { typographyUtil, typographyStyle };

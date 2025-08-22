@@ -5,13 +5,15 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import { theme } from '@theme';
 
+import { BrowserRoutes } from './router/BrowserRoutes';
+
 const rootElement = document.getElementById('root') as HTMLElement;
 
 createRoot(rootElement).render(
     <StrictMode>
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <h1>Hello World</h1>
+            <BrowserRoutes />
         </ThemeProvider>
     </StrictMode>,
 );

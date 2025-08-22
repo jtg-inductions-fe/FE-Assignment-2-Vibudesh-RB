@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, Theme } from '@mui/material/styles';
 
 import { SCALING_FACTOR } from '@constant';
 
@@ -10,7 +10,7 @@ import { breakpoints, mixins, palette, typography } from './foundations';
 /* 
 Initialize the theme with base theme elements (excluding typography styles and spacing to ensure the theme has correct breakpoints and pxToRem function set.)
 */
-let theme = createTheme({
+let theme: Theme = createTheme({
     palette,
     breakpoints,
     mixins,
@@ -20,7 +20,7 @@ let theme = createTheme({
         ...typography.typographyUtil,
     },
     spacing: (factor: number) =>
-        theme.typography.pxToRem(factor * SCALING_FACTOR),
+        theme.typography.pxToRem(factor * SCALING_FACTOR), // Use pxToRem function from typography
 });
 
 /* Extend the base theme with additional configurations */

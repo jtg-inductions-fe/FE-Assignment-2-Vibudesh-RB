@@ -44,8 +44,10 @@ const ProfilePopover = ({ name, email, imageUrl }: ProfilePopoverProps) => {
                 }}
             >
                 <Box sx={{ p: 2, minWidth: 200 }}>
-                    <Typography variant="subtitle1">{name}</Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="subtitle1" noWrap>
+                        {name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" noWrap>
                         {email}
                     </Typography>
                 </Box>

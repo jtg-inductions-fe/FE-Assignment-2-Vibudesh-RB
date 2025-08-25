@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import { HEADER_HEIGHT } from 'constant/themeConstant';
 import Header from 'container/Header/Header';
+import Sidebar from 'container/Sidebar/Sidebar';
+import sidebarData from 'mockData/Sidebar/Sidebar';
 import { Outlet } from 'react-router';
 
 import { Box, Drawer, useMediaQuery } from '@mui/material';
@@ -16,24 +18,38 @@ const Layout = ({
     children,
 }: LayoutProps) => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
-    const isMediumUp = useMediaQuery(theme.breakpoints.up('md'));
+    const isMobile = useMediaQuery(theme.breakpoints.up('md'));
 
     const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
     return (
-        <Box>
+        <Box height="100vh" display="flex" flexDirection="column">
             {showHeader &&
-                (isMediumUp ? (
-                    <Header />
+                (isMobile ? (
+                    <header>
+                        <Header />
+                    </header>
                 ) : (
-                    <Header onMenuClick={toggleSidebar} showHamburger />
+                    <header>
+                        <Header onMenuClick={toggleSidebar} showHamburger />
+                    </header>
                 ))}
 
-            <Box display="flex" flex="1">
-                {showSidebar && isMediumUp && <h1>Sidebar</h1>}
+            <Box display="flex" flex="1" overflow="hidden">
+                {showSidebar && isMobile && (
+                    <Box
+                        component="aside"
+                        sx={{
+                            height: `calc(100vh - ${showHeader ? HEADER_HEIGHT : 0}px)`,
+                        }}
+                    >
+                        <Sidebar items={sidebarData} />
+                    </Box>
+                )}
 
-                {!isMediumUp && showSidebar && (
+                {!isMobile && showSidebar && (
                     <Drawer
+                        component="aside"
                         open={isSidebarOpen}
                         onClose={() => setSidebarOpen(false)}
                         PaperProps={{
@@ -43,13 +59,11 @@ const Layout = ({
                             },
                         }}
                     >
-                        <Box p={2}>
-                            <h1>Sidebar</h1>
-                        </Box>
+                        <Sidebar items={sidebarData} />
                     </Drawer>
                 )}
 
-                <Box component="main" flex="1" p={2}>
+                <Box component="main" flex="1" p={2} overflow="auto">
                     {children ?? <Outlet />}
                 </Box>
             </Box>

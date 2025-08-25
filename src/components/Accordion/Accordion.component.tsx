@@ -15,7 +15,7 @@ const AccordionComponent = ({
     icon: IconComponent,
     children,
 }: AccordionProps) => (
-    <Accordion elevation={0}>
+    <Accordion elevation={0} sx={{ backgroundColor: 'transparent' }}>
         <StyledAccordionSummary expandIcon={<ExpandMoreIcon />}>
             <StyledBox>
                 {IconComponent && (

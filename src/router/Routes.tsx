@@ -33,4 +33,19 @@ export const Routes: RouteObject[] = [
             },
         ],
     },
+    {
+        path: '/messages',
+        element: (
+            <Layout showHeader showSidebar>
+                <h1>Home</h1>
+            </Layout>
+        ),
+        errorElement: <h1>Error loading page</h1>,
+        children: [
+            {
+                index: true,
+                element: <h1>Home</h1>,
+            },
+        ],
+    },
 ];

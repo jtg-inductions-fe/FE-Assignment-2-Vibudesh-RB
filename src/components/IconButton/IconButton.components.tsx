@@ -7,9 +7,19 @@ const IconButtonComponent = ({
     icon: Icon,
     rounded,
     onClick,
+    active = false,
 }: IconButtonProps) => (
-    <StyledBox isRounded={rounded}>
-        <IconButton color="secondary" onClick={onClick}>
+    <StyledBox isRounded={rounded} isActive={active}>
+        <IconButton
+            color={active ? 'primary' : 'secondary'}
+            onClick={onClick}
+            sx={(theme) => ({
+                '&:hover': {
+                    color: theme.palette.primary.main,
+                },
+                color: active ? theme.palette.primary.main : undefined,
+            })}
+        >
             <Icon />
         </IconButton>
     </StyledBox>
